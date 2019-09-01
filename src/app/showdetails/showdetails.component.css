@@ -1,0 +1,12 @@
+.show-details-container{
+    height: 100vh;
+}
+.show-detail-innerdiv{
+padding:20px 0;
+}
+.show-detail-innerdiv .card{
+    border:0;
+}
+.card-image{
+    width: 100%;
+}

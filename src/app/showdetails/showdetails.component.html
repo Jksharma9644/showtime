@@ -1,0 +1,36 @@
+<div >
+<div class="container show-details-container">
+  <div class="row show-detail-innerdiv" *ngIf="showsDetails;else noDetails">
+    <div class="col-md-4">
+        <div *ngIf="showsDetails.image;else NoImage">
+            <img class="card-image" src="{{showsDetails.image.original}}">
+         </div>
+         <ng-template #NoImage> 
+             <img class="no-image" src="../../assets/images/download.png" alt="Avatar" style="width:100%">
+
+         </ng-template>
+
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+               {{showsDetails.name | uppercase }}
+            </div>
+            <div class="card-body">
+              
+              <h5 class="card-title" ><b>{{showsDetails.type}}</b>
+              </h5>
+              <h5 class="card-title" >Premiered on {{showsDetails.premiered}}</h5>
+              <h5>Overview</h5>
+              <p class="card-text" [innerHTML]="showsDetails.summary"></p>
+             
+            </div>
+          </div>
+
+      </div>
+  </div>
+  <ng-template #noDetails>
+
+  </ng-template>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+  <div class="row" *ngIf="showsList && showsList.length>0;else noData">
+    <ng-container *ngFor="let item of showsList;let i=index">
+      
+          <div class="col-md-2 card-container"  >
+              <div class="card" (click)="redirect(item.show.id)">
+                  <div *ngIf="item.show.image;else NoImage">
+                     <img class="card-image" src="{{item.show.image.medium}}">
+                  </div>
+                  <ng-template #NoImage> 
+                      <img class="no-image" src="../../assets/images/download.png" alt="Avatar" style="width:100%">
+      
+                  </ng-template>
+      
+                  <div class="card-caption">
+                    <h6><b>{{item.show.name}}</b></h6> <br/>
+                    <span class="sub-details">{{item.show.type}}</span> 
+                    
+                    <span class="sub-details-rating stars-container stars-40">★★★★★</span>
+
+                  </div>
+                </div>
+          </div>
+   
+  </ng-container>
+
+   
+  </div>
+  <ng-template #noData *ngIf="!loading">
+   <p>No Data Avaialable</p>
+  </ng-template>
+   
+  
+</div>
+

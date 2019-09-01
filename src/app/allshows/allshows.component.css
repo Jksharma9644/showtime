@@ -1,0 +1,70 @@
+.card-container{
+  margin: 10px 0 10px 0;
+  padding-right: 0px!important;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  /* Add some padding inside the card container */
+  .card-caption {
+    padding: 10px 16px;
+    height: 120px;
+    position:relative;
+  }
+  .card-caption h6{
+  }
+  .card-image{
+    width: 100%;
+  }
+  .no-image{
+    height: 292px;
+  }
+  .card-caption .sub-details{
+    padding: 6px;
+    color: darkslateblue;
+    font-weight: 700;
+    position: absolute;
+    left:5px;
+    bottom: 5px;
+  }
+  .card-caption .sub-details-rating{
+    /* background: goldenrod; */
+    padding: 6px;
+    /* color: #fff; */
+    font-weight: 700;
+    position: absolute;
+    right:5px;
+    bottom: 5px;
+  }
+  .stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+  }
+   
+  .stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+  }
+   
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+   
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+  }
