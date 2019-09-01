@@ -11,10 +11,10 @@ export class ShowsandseriesService {
   }
 
   getShowsList() {
-    return this.http.get("http://api.tvmaze.com/schedule");
+    return this.http.get("https://api.tvmaze.com/schedule");
   }
   getShowDetails(id){
-    return this.http.get("http://api.tvmaze.com/shows/"+id);
+    return this.http.get("https://api.tvmaze.com/shows/"+id);
  
   }
 }
