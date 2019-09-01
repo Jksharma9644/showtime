@@ -1,3 +1,6 @@
+.main-container-shows-info{
+    background: #343a40!important;
+}
 .show-details-container{
     height: 100vh;
 }
@@ -6,7 +9,17 @@ padding:20px 0;
 }
 .show-detail-innerdiv .card{
     border:0;
+    background: transparent;
+    color: #fff;
 }
+.show-detail-innerdiv .card .card-header{
+    border-bottom: 1px solid rgba(211,215,219,.1);
+    background: transparent;
+
+}
+
+
+
 .card-image{
     width: 100%;
 }

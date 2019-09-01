@@ -1,4 +1,4 @@
-<div >
+<div class="main-container-shows-info">
 <div class="container show-details-container">
   <div class="row show-detail-innerdiv" *ngIf="showsDetails;else noDetails">
     <div class="col-md-4">
@@ -14,11 +14,14 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-               {{showsDetails.name | uppercase }}
+              <h2> {{showsDetails.name | titlecase }}</h2>
             </div>
             <div class="card-body">
               
-              <h5 class="card-title" ><b>{{showsDetails.type}}</b>
+              <h5 class="card-title" > <span *ngFor="let g of showsDetails.genres;let i=index">
+                <span *ngIf="i>0">|</span>   
+                {{g}} 
+               </span>
               </h5>
               <h5 class="card-title" >Premiered on {{showsDetails.premiered}}</h5>
               <h5>Overview</h5>
@@ -26,6 +29,8 @@
              
             </div>
           </div>
+     
+         
 
       </div>
   </div>

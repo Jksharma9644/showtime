@@ -1,10 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid bg-container">
 
   <div class="row" *ngIf="showsList && showsList.length>0;else noData">
     <ng-container *ngFor="let item of showsList;let i=index">
       
-          <div class="col-md-2 card-container"  >
-              <div class="card" (click)="redirect(item.show.id)">
+          <div class="col-md-2 card-container" >
+              <div class="card" >
                   <div *ngIf="item.show.image;else NoImage">
                      <img class="card-image" src="{{item.show.image.medium}}">
                   </div>
@@ -13,14 +13,21 @@
       
                   </ng-template>
       
-                  <div class="card-caption">
+                  <!-- <div class="card-caption">
                     <h6><b>{{item.show.name}}</b></h6> <br/>
+                    
                     <span class="sub-details">{{item.show.type}}</span> 
                     
-                    <span class="sub-details-rating stars-container stars-40">★★★★★</span>
 
-                  </div>
+                  </div> -->
                 </div>
+                <div class="show-info">
+                    <div class="show-type"><span class="sub-details">{{item.show.type}}</span> 
+                    </div>
+                    <button (click)="redirect(item.show.id)" class="detail-btn">
+                      Details
+                    </button>
+                  </div>
           </div>
    
   </ng-container>
